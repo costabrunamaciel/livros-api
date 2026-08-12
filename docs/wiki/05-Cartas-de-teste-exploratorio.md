@@ -141,4 +141,4 @@ Cada carta segue o formato padrão de *charter* (missão, foco, técnica, tempo 
 **Tempo total estimado:** 4h (compatível com a estimativa AT05 — Testes exploratórios do [[04 Plano de testes da API]]).
 
 ---
-Veja também: [[04 Plano de testes da API]] · [[Cenários Funcionais em Gherkin]]
+Veja também: [[04 Plano de testes da API]] · [[Casos de testes em Gherkin]]

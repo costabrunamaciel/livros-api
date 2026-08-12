@@ -2,7 +2,7 @@
 
 A automação de API está implementada com **[Cypress](https://www.cypress.io/)**, usando `cy.request()` — sem interface gráfica, direto nas chamadas HTTP, já que a Livros API não tem UI.
 
-Os testes ficam em [`cypress/e2e/`](https://github.com/costabrunamaciel/livros-api/tree/master/cypress/e2e) no repositório, um arquivo por requisito funcional (RF01–RF05), com os mesmos identificadores usados nos [[Cenários Funcionais em Gherkin]].
+Os testes ficam em [`cypress/e2e/`](https://github.com/costabrunamaciel/livros-api/tree/master/cypress/e2e) no repositório, um arquivo por requisito funcional (RF01–RF05), com os mesmos identificadores usados nos [[Casos de testes em Gherkin]].
 
 ## Specs
 
@@ -43,4 +43,4 @@ Cada teste cria os próprios dados via `POST` antes de agir, em vez de depender 
 - Testes unitários e de integração complementares em outra ferramenta.
 
 ---
-Veja também: [[04 Plano de testes da API]] · [[Cenários Funcionais em Gherkin]]
+Veja também: [[04 Plano de testes da API]] · [[Casos de testes em Gherkin]]

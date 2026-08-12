@@ -48,4 +48,4 @@ Lá é possível expandir cada endpoint, ver o schema de request/response e usar
 ```
 
 ---
-Veja também: [[03 Regras de negócio]] · [[Cenários Funcionais em Gherkin]]
+Veja também: [[03 Regras de negócio]] · [[Casos de testes em Gherkin]]

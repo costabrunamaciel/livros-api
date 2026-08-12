@@ -8,7 +8,7 @@
 ### 🧭 A estratégia
 - [[04 Plano de testes da API]]
 - [[05 Cartas de teste exploratório]]
-- [[Cenários Funcionais em Gherkin]]
+- [[Casos de testes em Gherkin]]
 
 ### ⚙️ A execução
 - [[07 Automação com Cypress]]
