@@ -20,7 +20,7 @@ describe("RF04 - Atualizar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-010: deve atualizar todos os campos de um livro existente", () => {
+  it("LIVROS-API-010: deve atualizar todos os campos de um livro existente", () => {
     const dadosAtualizados = {
       title: "Livro atualizado",
       author: "Autor atualizado",
@@ -35,7 +35,7 @@ describe("RF04 - Atualizar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-011: deve atualizar parcialmente mantendo os campos não enviados", () => {
+  it("LIVROS-API-011: deve atualizar parcialmente mantendo os campos não enviados", () => {
     cy.request("PUT", `/api/books/${idExistente}`, {
       description: "Somente a descrição mudou",
     }).then((resposta) => {
@@ -46,7 +46,7 @@ describe("RF04 - Atualizar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-012: deve retornar 404 ao atualizar um id inexistente", () => {
+  it("LIVROS-API-012: deve retornar 404 ao atualizar um id inexistente", () => {
     cy.request({
       method: "PUT",
       url: "/api/books/999999",
@@ -58,7 +58,7 @@ describe("RF04 - Atualizar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-013: não deve permitir alterar o id através do payload", () => {
+  it("LIVROS-API-013: não deve permitir alterar o id através do payload", () => {
     cy.request("PUT", `/api/books/${idExistente}`, {
       id: 999999,
       title: "Tentando trocar o id",

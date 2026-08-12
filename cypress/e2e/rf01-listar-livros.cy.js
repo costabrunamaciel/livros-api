@@ -3,7 +3,7 @@
 // Referência: tests/features/RF01-listar-livros.feature
 
 describe("RF01 - Listar livros", () => {
-  it("TC-LIVROS-API-001: deve listar todos os livros cadastrados", () => {
+  it("LIVROS-API-001: deve listar todos os livros cadastrados", () => {
     const novoLivro = {
       title: "Livro de teste - listagem",
       author: "Autor de Teste",
@@ -24,7 +24,7 @@ describe("RF01 - Listar livros", () => {
     });
   });
 
-  it("TC-LIVROS-API-002: deve retornar um array vazio quando não há livros cadastrados", () => {
+  it("LIVROS-API-002: deve retornar um array vazio quando não há livros cadastrados", () => {
     // Esvazia o acervo removendo todos os livros existentes, para validar o caso de lista vazia.
     // Executado por último neste arquivo: os demais specs (RF02-RF05) criam seus próprios dados
     // e não dependem de livros pré-existentes, então esvaziar aqui não os afeta.

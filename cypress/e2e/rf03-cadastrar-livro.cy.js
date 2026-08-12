@@ -3,7 +3,7 @@
 // Referência: tests/features/RF03-cadastrar-livro.feature
 
 describe("RF03 - Cadastrar livro", () => {
-  it("TC-LIVROS-API-005: deve cadastrar um livro com todos os campos preenchidos", () => {
+  it("LIVROS-API-005: deve cadastrar um livro com todos os campos preenchidos", () => {
     const livro = {
       title: "O Hobbit",
       author: "J.R.R. Tolkien",
@@ -19,7 +19,7 @@ describe("RF03 - Cadastrar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-006: deve cadastrar um livro somente com os campos obrigatórios", () => {
+  it("LIVROS-API-006: deve cadastrar um livro somente com os campos obrigatórios", () => {
     const livro = { title: "Duna", author: "Frank Herbert" };
 
     cy.request("POST", "/api/books", livro).then((resposta) => {
@@ -29,7 +29,7 @@ describe("RF03 - Cadastrar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-007: deve retornar 400 ao cadastrar sem o campo title", () => {
+  it("LIVROS-API-007: deve retornar 400 ao cadastrar sem o campo title", () => {
     cy.request({
       method: "POST",
       url: "/api/books",
@@ -41,7 +41,7 @@ describe("RF03 - Cadastrar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-008: deve retornar 400 ao cadastrar sem o campo author", () => {
+  it("LIVROS-API-008: deve retornar 400 ao cadastrar sem o campo author", () => {
     cy.request({
       method: "POST",
       url: "/api/books",
@@ -53,7 +53,7 @@ describe("RF03 - Cadastrar livro", () => {
     });
   });
 
-  it("TC-LIVROS-API-009: deve gerar um id automático diferente de ids já existentes", () => {
+  it("LIVROS-API-009: deve gerar um id automático diferente de ids já existentes", () => {
     cy.request("POST", "/api/books", { title: "Livro A", author: "Autor A" }).then((primeiro) => {
       cy.request("POST", "/api/books", { title: "Livro B", author: "Autor B" }).then((segundo) => {
         expect(segundo.body.id).to.not.eq(primeiro.body.id);

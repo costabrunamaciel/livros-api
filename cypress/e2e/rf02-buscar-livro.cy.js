@@ -14,14 +14,14 @@ describe("RF02 - Buscar livro específico", () => {
     });
   });
 
-  it("TC-LIVROS-API-003: deve retornar o livro quando o id existe", () => {
+  it("LIVROS-API-003: deve retornar o livro quando o id existe", () => {
     cy.request("GET", `/api/books/${idExistente}`).then((resposta) => {
       expect(resposta.status).to.eq(200);
       expect(resposta.body.id).to.eq(idExistente);
     });
   });
 
-  it("TC-LIVROS-API-004: deve retornar 404 quando o id não existe", () => {
+  it("LIVROS-API-004: deve retornar 404 quando o id não existe", () => {
     cy.request({
       method: "GET",
       url: "/api/books/999999",
