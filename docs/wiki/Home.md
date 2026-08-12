@@ -17,7 +17,7 @@ API REST de estudo para prática de testes manuais e automatizados, cobrindo o r
 ### 🧭 A estratégia
 - [[04 Plano de testes da API]]
 - [[05 Cartas de teste exploratório]]
-- [[Casos de testes em Gherkin]]
+- [[06 Casos de testes em Gherkin]]
 
 ### ⚙️ A execução
 - [[07 Automação com Cypress]]

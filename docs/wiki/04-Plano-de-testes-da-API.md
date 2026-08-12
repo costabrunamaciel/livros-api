@@ -457,4 +457,4 @@ Como o projeto possui finalidade de estudo, inicialmente a equipe será composta
 | 12 | Relatório final | QA | Planejado |
 
 ---
-Veja também: [[03 Regras de negócio]] · [[05 Cartas de teste exploratório]] · [[Casos de testes em Gherkin]]
+Veja também: [[03 Regras de negócio]] · [[05 Cartas de teste exploratório]] · [[06 Casos de testes em Gherkin]]
