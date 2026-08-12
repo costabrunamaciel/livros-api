@@ -68,13 +68,16 @@ Abra **http://localhost:3000/docs** no navegador para ver a documentação inter
 
 ```
 livros-api/
-├── index.js          # Ponto de entrada da API (rotas e lógica dos livros)
-├── swagger.js         # Definição da documentação OpenAPI/Swagger
+├── index.js             # Ponto de entrada da API (rotas e lógica dos livros)
+├── swagger.js            # Definição da documentação OpenAPI/Swagger
 ├── package.json
-├── tests/              # Testes automatizados (ver seção abaixo)
-│   ├── unit/           # Testes unitários
-│   ├── integration/    # Testes de integração / end-to-end (chamadas HTTP aos endpoints)
-│   └── features/       # Cenários funcionais em Gherkin (BDD), rastreáveis a RF01-RF05
+├── cypress.config.js      # Configuração do Cypress (baseUrl, specPattern)
+├── cypress/
+│   └── e2e/                # Testes automatizados de API com Cypress (cy.request)
+├── tests/
+│   ├── unit/                # Testes unitários (reservado)
+│   ├── integration/         # Testes de integração (reservado)
+│   └── features/            # Cenários funcionais em Gherkin (BDD), rastreáveis a RF01-RF05
 └── README.md
 ```
 
@@ -87,35 +90,34 @@ livros-api/
 
 ## 🧪 Testes automatizados
 
-> Estrutura preparada para receber os testes — implementação ainda pendente.
+A automação de API está implementada com **[Cypress](https://www.cypress.io/)**, usando `cy.request()` (sem interface gráfica, direto nas chamadas HTTP). Os testes ficam em [`cypress/e2e/`](./cypress/e2e), um arquivo por requisito funcional, usando os mesmos identificadores `TC-LIVROS-API-0XX` da [matriz de rastreabilidade](./tests/features).
 
-A pasta [`tests/`](./tests) já está criada, dividida em:
+| Spec | Requisito | Casos de teste |
+|---|---|---|
+| `cypress/e2e/rf01-listar-livros.cy.js` | RF01 | TC-001, TC-002 |
+| `cypress/e2e/rf02-buscar-livro.cy.js` | RF02 | TC-003, TC-004 |
+| `cypress/e2e/rf03-cadastrar-livro.cy.js` | RF03 | TC-005 a TC-009 |
+| `cypress/e2e/rf04-atualizar-livro.cy.js` | RF04 | TC-010 a TC-013 |
+| `cypress/e2e/rf05-remover-livro.cy.js` | RF05 | TC-014 a TC-016 |
 
-- **`tests/unit/`** — testes unitários (funções isoladas, regras de negócio).
-- **`tests/integration/`** — testes de integração, batendo diretamente nos endpoints HTTP (`GET`, `POST`, `PUT`, `DELETE` em `/api/books`) para validar o comportamento real da API.
-- **`tests/features/`** — cenários funcionais em Gherkin (`.feature`), prontos para automação com Cucumber/Behave.
+**Total: 16/16 cenários automatizados**, cobrindo todos os casos definidos no [Plano de Testes](./docs/plano-de-testes.md).
 
-Sugestão de ferramentas (a definir): [Jest](https://jestjs.io/) + [Supertest](https://github.com/ladjs/supertest) para testes de API em Node.js, e [Cucumber.js](https://github.com/cucumber/cucumber-js) para executar os cenários Gherkin.
+A pasta [`tests/`](./tests) permanece reservada para testes unitários (`tests/unit/`) e de integração com outra ferramenta (`tests/integration/`), caso sejam adicionados depois. `tests/features/` guarda a documentação em Gherkin que serviu de base para os testes do Cypress.
 
 ### Como rodar os testes
 
-_(seção a preencher conforme os testes forem adicionados)_
+> ⚠️ A API precisa estar rodando (`npm start`) antes de executar os testes, pois o Cypress faz chamadas HTTP reais em `http://localhost:3000`.
 
 ```bash
-npm test
+# 1. Em um terminal, suba a API
+npm start
+
+# 2. Em outro terminal, rode os testes em modo headless (linha de comando)
+npm run cy:run
+
+# ...ou abra o Cypress em modo interativo (interface gráfica, para ver os testes rodando)
+npm run cy:open
 ```
-
-### Casos sugeridos para cobrir
-
-- [ ] `GET /api/books` retorna lista de livros com status `200`
-- [ ] `GET /api/books/{id}` retorna o livro correto quando existe
-- [ ] `GET /api/books/{id}` retorna `404` quando o id não existe
-- [ ] `POST /api/books` cria um livro com dados válidos e retorna `201`
-- [ ] `POST /api/books` retorna `400` quando faltam campos obrigatórios (`title`, `author`)
-- [ ] `PUT /api/books/{id}` atualiza os campos informados e retorna `200`
-- [ ] `PUT /api/books/{id}` retorna `404` quando o id não existe
-- [ ] `DELETE /api/books/{id}` remove o livro e retorna `204`
-- [ ] `DELETE /api/books/{id}` retorna `404` quando o id não existe
 
 ## 📄 Licença
 

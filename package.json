@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +17,8 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "cypress": "^15.20.1"
   }
 }
