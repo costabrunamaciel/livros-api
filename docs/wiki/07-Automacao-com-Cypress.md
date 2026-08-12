@@ -43,4 +43,4 @@ Cada teste cria os próprios dados via `POST` antes de agir, em vez de depender 
 - Testes unitários e de integração complementares em outra ferramenta.
 
 ---
-Veja também: [[04 Plano de testes da API]] · [[06 Casos de testes em Gherkin]]
+Veja também: [[04 Plano de testes da API]] · [[06 Casos de testes em Gherkin]] · [[08 Métricas e indicadores de qualidade]]

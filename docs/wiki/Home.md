@@ -21,3 +21,5 @@ API REST de estudo para prática de testes manuais e automatizados, cobrindo o r
 
 ### ⚙️ A execução
 - [[07 Automação com Cypress]]
+- [[08 Métricas e indicadores de qualidade]]
+- [[09 Gerenciamento de bugs]]
