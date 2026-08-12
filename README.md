@@ -73,20 +73,29 @@ livros-api/
 ├── package.json
 ├── tests/              # Testes automatizados (ver seção abaixo)
 │   ├── unit/           # Testes unitários
-│   └── integration/    # Testes de integração / end-to-end (chamadas HTTP aos endpoints)
+│   ├── integration/    # Testes de integração / end-to-end (chamadas HTTP aos endpoints)
+│   └── features/       # Cenários funcionais em Gherkin (BDD), rastreáveis a RF01-RF05
 └── README.md
 ```
 
+## 📑 Documentação de QA
+
+- [Especificação Funcional](./docs/especificacao-funcional.md) — requisitos RF01 a RF05 e regras de negócio.
+- [Plano de Testes (PT-LIVROS-API-001)](./docs/plano-de-testes.md) — escopo, estratégia, riscos e cronograma, seguindo ISO/IEC/IEEE 29119 e ISO/IEC 25010.
+- [Cartas de Teste Exploratório](./docs/cartas-teste-exploratorio.md) — charters para as sessões de teste exploratório (ST04).
+- [Cenários Funcionais em Gherkin](./tests/features) — 16 cenários BDD com matriz de rastreabilidade aos RF01-RF05.
+
 ## 🧪 Testes automatizados
 
-> Estrutura preparada para receber os testes — ainda não implementados.
+> Estrutura preparada para receber os testes — implementação ainda pendente.
 
 A pasta [`tests/`](./tests) já está criada, dividida em:
 
 - **`tests/unit/`** — testes unitários (funções isoladas, regras de negócio).
 - **`tests/integration/`** — testes de integração, batendo diretamente nos endpoints HTTP (`GET`, `POST`, `PUT`, `DELETE` em `/api/books`) para validar o comportamento real da API.
+- **`tests/features/`** — cenários funcionais em Gherkin (`.feature`), prontos para automação com Cucumber/Behave.
 
-Sugestão de ferramentas (a definir): [Jest](https://jestjs.io/) + [Supertest](https://github.com/ladjs/supertest) para testes de API em Node.js.
+Sugestão de ferramentas (a definir): [Jest](https://jestjs.io/) + [Supertest](https://github.com/ladjs/supertest) para testes de API em Node.js, e [Cucumber.js](https://github.com/cucumber/cucumber-js) para executar os cenários Gherkin.
 
 ### Como rodar os testes
 
