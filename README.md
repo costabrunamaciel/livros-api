@@ -4,6 +4,8 @@ API REST simples para estudos e prática de testes, inspirada na [FakeRESTApi](h
 
 Permite: cadastrar, listar, buscar por id, atualizar e deletar livros. Os dados ficam em memória (zeram ao reiniciar a API) — ideal para testar sem depender de banco de dados.
 
+📋 Veja a [especificação funcional completa](./docs/especificacao-funcional.md) para detalhes de regras de negócio e comportamento esperado de cada endpoint.
+
 ## 🚀 Tecnologias
 
 - [Node.js](https://nodejs.org/)
