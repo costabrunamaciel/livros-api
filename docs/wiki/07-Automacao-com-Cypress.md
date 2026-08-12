@@ -33,6 +33,21 @@ npm run cy:run
 npm run cy:open
 ```
 
+## Relatório de execução (Mochawesome)
+
+Toda execução via `npm run cy:run` (ou `npx cypress run`) gera automaticamente um relatório em HTML com o resultado da suíte, usando o [cypress-mochawesome-reporter](https://github.com/LironEr/cypress-mochawesome-reporter):
+
+```
+cypress/reports/html/index.html
+```
+
+O relatório traz, por execução:
+- gráfico de passando/falhando/pendente;
+- tempo de execução total e por spec (RF01–RF05);
+- detalhe de cada cenário, com stack trace e screenshot automático em caso de falha.
+
+Esse relatório é regerado a cada execução (não é versionado no repositório) e é a fonte das métricas automatizadas descritas em [[08 Métricas e indicadores de qualidade]].
+
 ## Estratégia de dados de teste
 
 Cada teste cria os próprios dados via `POST` antes de agir, em vez de depender de livros pré-cadastrados (ex.: os de exemplo com id `1` e `2`). Isso garante que os testes sejam independentes entre si e possam rodar em qualquer ordem, mesmo com os dados em memória sendo voláteis.

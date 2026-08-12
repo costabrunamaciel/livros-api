@@ -25,25 +25,32 @@ Indicadores usados para acompanhar a saúde do projeto e o progresso dos testes,
 
 *(extraídas automaticamente a cada execução — não precisa calcular na mão)*
 
-O relatório [Mochawesome](https://github.com/adamgruber/mochawesome) gera, a cada `npm run cy:run`, um resumo em HTML/JSON com o resultado da suíte. Os indicadores abaixo vêm direto de lá:
+O relatório é gerado com **[cypress-mochawesome-reporter](https://github.com/LironEr/cypress-mochawesome-reporter)**, configurado em [[07 Automação com Cypress]]. A cada `npm run cy:run`, ele atualiza:
+
+```
+cypress/reports/html/index.html
+```
+
+Os indicadores abaixo vêm direto de lá:
 
 | Indicador | De onde vem no relatório |
 |---|---|
-| Taxa de aprovação (pass rate) | `stats.passPercent` |
-| Testes passando / falhando / pendentes | `stats.passes`, `stats.failures`, `stats.pending` |
-| Duração total da suíte | `stats.duration` |
-| Duração por spec (RF01–RF05) | seção de cada `describe` no relatório |
-| Evidência de falha (quando houver) | stack trace + screenshot anexados automaticamente pelo Cypress |
+| Taxa de aprovação (pass rate) | Gráfico e resumo no topo do relatório |
+| Testes passando / falhando / pendentes | Contadores por spec e no total |
+| Duração total da suíte | Tempo total exibido no cabeçalho |
+| Duração por spec (RF01–RF05) | Seção de cada `describe` no relatório |
+| Evidência de falha (quando houver) | Stack trace + screenshot anexados automaticamente pelo Cypress |
 
-> 📎 Quando o Mochawesome estiver configurado, referencie aqui o caminho onde os relatórios são salvos (ex.: `cypress/reports/mochawesome/`) e, se publicar o HTML em algum lugar acessível, linke a versão mais recente.
+> O arquivo é regerado a cada execução e **não é versionado** no repositório (está no `.gitignore`) — os números abaixo, no histórico, é que ficam registrados como referência.
 
 ## Histórico de execuções
 
-Registre um snapshot toda vez que quiser comparar a evolução entre ciclos — copie os números do resumo do Mochawesome (ou do `npm run cy:run`, enquanto o relatório não estiver pronto).
+Registre um snapshot toda vez que quiser comparar a evolução entre ciclos — copie os números do resumo do relatório em `cypress/reports/html/index.html`.
 
 | Data | Total de testes | Passando | Falhando | Taxa de aprovação | Duração | Observações |
 |---|---|---|---|---|---|---|
 | 2026-08-12 | 16 | 16 | 0 | 100% | ~0,8s | Execução local, sem relatório Mochawesome ainda |
+| 2026-08-12 | 16 | 16 | 0 | 100% | ~0,57s | Primeira execução com relatório Mochawesome configurado |
 
 ## Densidade e distribuição de defeitos
 

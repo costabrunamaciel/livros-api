@@ -118,6 +118,16 @@ npm run cy:run
 npm run cy:open
 ```
 
+### Relatório de execução (Mochawesome)
+
+Toda execução via `npm run cy:run` (ou `npx cypress run`) gera automaticamente um relatório em HTML com o resultado da suíte, usando o [cypress-mochawesome-reporter](https://github.com/LironEr/cypress-mochawesome-reporter):
+
+```
+cypress/reports/html/index.html
+```
+
+Abra esse arquivo no navegador para ver gráficos, tempo de execução por teste e detalhes de cada cenário (RF01–RF05). O relatório é regerado a cada execução e não é versionado no repositório (está no `.gitignore`).
+
 ## 📄 Licença
 
 Projeto criado para fins de estudo.
