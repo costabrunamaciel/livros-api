@@ -75,7 +75,6 @@ livros-api/
 ├── cypress/
 │   └── e2e/                # Testes automatizados de API com Cypress (cy.request)
 ├── tests/
-│   ├── unit/                # Testes unitários (reservado)
 │   ├── integration/         # Testes de integração (reservado)
 │   └── features/            # Cenários funcionais em Gherkin (BDD), rastreáveis a RF01-RF05
 └── README.md
@@ -102,7 +101,7 @@ A automação de API está implementada com **[Cypress](https://www.cypress.io/)
 
 **Total: 16/16 cenários automatizados**, cobrindo todos os casos definidos no [Plano de Testes](./docs/plano-de-testes.md).
 
-A pasta [`tests/`](./tests) permanece reservada para testes unitários (`tests/unit/`) e de integração com outra ferramenta (`tests/integration/`), caso sejam adicionados depois. `tests/features/` guarda a documentação em Gherkin que serviu de base para os testes do Cypress.
+A pasta [`tests/`](./tests) permanece reservada para testes de integração com outra ferramenta (`tests/integration/`), caso sejam adicionados depois. `tests/features/` guarda a documentação em Gherkin que serviu de base para os testes do Cypress.
 
 ### Como rodar os testes
 
