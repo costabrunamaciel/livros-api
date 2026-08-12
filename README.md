@@ -90,15 +90,15 @@ livros-api/
 
 ## 🧪 Testes automatizados
 
-A automação de API está implementada com **[Cypress](https://www.cypress.io/)**, usando `cy.request()` (sem interface gráfica, direto nas chamadas HTTP). Os testes ficam em [`cypress/e2e/`](./cypress/e2e), um arquivo por requisito funcional, usando os mesmos identificadores `TC-LIVROS-API-0XX` da [matriz de rastreabilidade](./tests/features).
+A automação de API está implementada com **[Cypress](https://www.cypress.io/)**, usando `cy.request()` (sem interface gráfica, direto nas chamadas HTTP). Os testes ficam em [`cypress/e2e/`](./cypress/e2e), um arquivo por requisito funcional.
 
 | Spec | Requisito | Casos de teste |
 |---|---|---|
-| `cypress/e2e/rf01-listar-livros.cy.js` | RF01 | TC-001, TC-002 |
-| `cypress/e2e/rf02-buscar-livro.cy.js` | RF02 | TC-003, TC-004 |
-| `cypress/e2e/rf03-cadastrar-livro.cy.js` | RF03 | TC-005 a TC-009 |
-| `cypress/e2e/rf04-atualizar-livro.cy.js` | RF04 | TC-010 a TC-013 |
-| `cypress/e2e/rf05-remover-livro.cy.js` | RF05 | TC-014 a TC-016 |
+| `cypress/e2e/rf01-listar-livros.cy.js` | RF01 | 001, 002 |
+| `cypress/e2e/rf02-buscar-livro.cy.js` | RF02 | 003, 004 |
+| `cypress/e2e/rf03-cadastrar-livro.cy.js` | RF03 | 005 a 009 |
+| `cypress/e2e/rf04-atualizar-livro.cy.js` | RF04 | 010 a 013 |
+| `cypress/e2e/rf05-remover-livro.cy.js` | RF05 | 014 a 016 |
 
 **Total: 16/16 cenários automatizados**, cobrindo todos os casos definidos no [Plano de Testes](./docs/plano-de-testes.md).
 
