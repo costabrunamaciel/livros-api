@@ -50,8 +50,8 @@ Cada carta segue o formato padrão de *charter* (missão, foco, técnica, tempo 
 - **Duração alocada:** 40 min
 - **Técnicas de apoio:** Error guessing
 - **Riscos relacionados:** RC05
-- **Notas da sessão:** _(preencher durante a execução)_
-- **Defeitos encontrados:** _(preencher durante a execução)_
+- **Notas da sessão:** Sessão executada em 2026-08-12, via `curl` direto contra a API local. Testados: `pageCount` com tipo incorreto (string) e `publishDate` com valor que não é uma data válida. A API aceitou ambos sem validar tipo/formato, retornando `201 Created` em vez de `400 Bad Request`. Não foram testados nesta sessão: JSON malformado (corpo inválido sintaticamente) e campos completamente desconhecidos — ficam como pendência para uma próxima sessão.
+- **Defeitos encontrados:** [#2 BUG-LIVROS-API-002](https://github.com/costabrunamaciel/livros-api/issues/2) — `pageCount` aceita tipo incorreto (string); [#4 BUG-LIVROS-API-004](https://github.com/costabrunamaciel/livros-api/issues/4) — `publishDate` aceita texto que não é uma data
 
 ---
 
@@ -64,8 +64,8 @@ Cada carta segue o formato padrão de *charter* (missão, foco, técnica, tempo 
 - **Duração alocada:** 30 min
 - **Técnicas de apoio:** Análise de valores limite, error guessing
 - **Riscos relacionados:** RC05
-- **Notas da sessão:** _(preencher durante a execução)_
-- **Defeitos encontrados:** _(preencher durante a execução)_
+- **Notas da sessão:** Sessão executada em 2026-08-12, via `curl` direto contra a API local. Testados: `pageCount` negativo (`-50`, e também `-999` via `PUT`) e `title` contendo apenas espaços em branco. Ambos foram aceitos sem validação, apesar de `title` ser um campo obrigatório (RF03). Não foram testados nesta sessão: strings muito longas em `title`/`author`/`description`, nem números muito grandes em `pageCount` — ficam como pendência para uma próxima sessão.
+- **Defeitos encontrados:** [#1 BUG-LIVROS-API-001](https://github.com/costabrunamaciel/livros-api/issues/1) — `pageCount` aceita valores negativos (POST e PUT); [#3 BUG-LIVROS-API-003](https://github.com/costabrunamaciel/livros-api/issues/3) — `title` só com espaços em branco passa como válido
 
 ---
 

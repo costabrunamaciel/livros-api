@@ -58,10 +58,10 @@ Registre um snapshot toda vez que quiser comparar a evolução entre ciclos — 
 
 | Indicador | Fórmula | Valor atual |
 |---|---|---|
-| Densidade de defeitos | nº de defeitos / nº de requisitos (RF01–RF05) | — |
-| Defeitos por severidade | contagem por Crítica / Alta / Média / Baixa | — |
-| Defeitos por status | contagem por Aberto / Em correção / Fechado | — |
-| Taxa de reabertura | defeitos reabertos / total de defeitos fechados | — |
+| Densidade de defeitos | nº de defeitos / nº de requisitos (RF01–RF05) | 4/5 = 0,8 defeitos por requisito (todos concentrados em RF03, um também em RF04) |
+| Defeitos por severidade | contagem por Crítica / Alta / Média / Baixa | Crítica: 0 · Alta: 0 · Média: 3 · Baixa: 1 |
+| Defeitos por status | contagem por Aberto / Em correção / Fechado | Aberto: 4 · Em correção: 0 · Fechado: 0 |
+| Taxa de reabertura | defeitos reabertos / total de defeitos fechados | 0/0 — n/a (nenhum defeito fechado ainda) |
 
 ## Regressão
 

@@ -69,7 +69,10 @@ Aberto → Em análise → Em correção → Em validação → Fechado
 
 | ID | Título | Severidade | Prioridade | Status | Requisito |
 |---|---|---|---|---|---|
-| _(nenhum defeito registrado até o momento)_ | | | | | |
+| [BUG-LIVROS-API-001](https://github.com/costabrunamaciel/livros-api/issues/1) | `pageCount` aceita valores negativos | Média | Média | Aberto | RF03, RF04 |
+| [BUG-LIVROS-API-002](https://github.com/costabrunamaciel/livros-api/issues/2) | `pageCount` aceita tipo incorreto (string) | Média | Média | Aberto | RF03 |
+| [BUG-LIVROS-API-003](https://github.com/costabrunamaciel/livros-api/issues/3) | `title` só com espaços em branco passa como válido | Média | Média | Aberto | RF03 |
+| [BUG-LIVROS-API-004](https://github.com/costabrunamaciel/livros-api/issues/4) | `publishDate` aceita texto que não é uma data | Baixa | Baixa | Aberto | RF03 |
 
 > Conforme novos defeitos forem encontrados (testes exploratórios, Gherkin ou Cypress), adicione uma linha nesta tabela e, se quiser, um bloco detalhado usando o template acima.
 
