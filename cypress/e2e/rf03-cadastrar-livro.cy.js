@@ -1,6 +1,6 @@
 // RF03 - Cadastrar livro (POST /api/books)
 // Rastreabilidade: TC-LIVROS-API-005 a TC-LIVROS-API-009
-// Referência: tests/features/RF03-cadastrar-livro.feature
+// Referência: Wiki > 06 Casos de testes em Gherkin
 
 describe("RF03 - Cadastrar livro", () => {
   it("LIVROS-API-005: deve cadastrar um livro com todos os campos preenchidos", () => {

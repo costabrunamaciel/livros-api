@@ -4,7 +4,7 @@ Cenários em Gherkin (formato BDD), um bloco por requisito funcional (RF01 a RF0
 
 Cada cenário é identificado com a tag `@TC-LIVROS-API-0XX` e rastreável ao requisito funcional (`@RF0X`) e ao endpoint (`@IT0X`) definidos na [Especificação Funcional](./Especificação-Funcional) e no [Plano de Testes](./Plano-de-Testes).
 
-Os arquivos-fonte `.feature` ficam versionados em [`tests/features/`](https://github.com/costabrunamaciel/livros-api/tree/master/tests/features) no repositório.
+Esses cenários serviram de base para a implementação dos testes automatizados em [`cypress/e2e/`](https://github.com/costabrunamaciel/livros-api/tree/master/cypress/e2e) (ver [[07 Automação com Cypress]]).
 
 ---
 

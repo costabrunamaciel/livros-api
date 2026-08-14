@@ -1,6 +1,6 @@
 // RF05 - Remover livro (DELETE /api/books/{id})
 // Rastreabilidade: TC-LIVROS-API-014 a TC-LIVROS-API-016
-// Referência: tests/features/RF05-remover-livro.feature
+// Referência: Wiki > 06 Casos de testes em Gherkin
 
 describe("RF05 - Remover livro", () => {
   it("LIVROS-API-014: deve remover um livro existente e retornar 204", () => {

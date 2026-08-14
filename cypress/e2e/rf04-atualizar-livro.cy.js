@@ -1,6 +1,6 @@
 // RF04 - Atualizar livro (PUT /api/books/{id})
 // Rastreabilidade: TC-LIVROS-API-010 a TC-LIVROS-API-013
-// Referência: tests/features/RF04-atualizar-livro.feature
+// Referência: Wiki > 06 Casos de testes em Gherkin
 
 describe("RF04 - Atualizar livro", () => {
   let idExistente;

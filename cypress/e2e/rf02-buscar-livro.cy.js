@@ -1,6 +1,6 @@
 // RF02 - Buscar livro específico (GET /api/books/{id})
 // Rastreabilidade: TC-LIVROS-API-003, TC-LIVROS-API-004
-// Referência: tests/features/RF02-buscar-livro.feature
+// Referência: Wiki > 06 Casos de testes em Gherkin
 
 describe("RF02 - Buscar livro específico", () => {
   let idExistente;

@@ -1,6 +1,6 @@
 // RF01 - Listar livros (GET /api/books)
 // Rastreabilidade: TC-LIVROS-API-001, TC-LIVROS-API-002
-// Referência: tests/features/RF01-listar-livros.feature
+// Referência: Wiki > 06 Casos de testes em Gherkin
 
 describe("RF01 - Listar livros", () => {
   it("LIVROS-API-001: deve listar todos os livros cadastrados", () => {

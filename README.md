@@ -75,8 +75,7 @@ livros-api/
 ├── cypress/
 │   └── e2e/                # Testes automatizados de API com Cypress (cy.request)
 ├── tests/
-│   ├── integration/         # Testes de integração (reservado)
-│   └── features/            # Cenários funcionais em Gherkin (BDD), rastreáveis a RF01-RF05
+│   └── integration/         # Testes de integração (reservado)
 └── README.md
 ```
 
@@ -85,7 +84,7 @@ livros-api/
 - [Especificação Funcional](./docs/especificacao-funcional.md) — requisitos RF01 a RF05 e regras de negócio.
 - [Plano de Testes (PT-LIVROS-API-001)](./docs/plano-de-testes.md) — escopo, estratégia, riscos e cronograma, seguindo ISO/IEC/IEEE 29119 e ISO/IEC 25010.
 - [Cartas de Teste Exploratório](./docs/cartas-teste-exploratorio.md) — charters para as sessões de teste exploratório (ST04).
-- [Cenários Funcionais em Gherkin](./tests/features) — 16 cenários BDD com matriz de rastreabilidade aos RF01-RF05.
+- [Cenários Funcionais em Gherkin](./docs/wiki/06-Casos-de-teste-em-Gherkin.md) — 16 cenários BDD com matriz de rastreabilidade aos RF01-RF05 (também disponível na [Wiki](https://github.com/costabrunamaciel/livros-api/wiki)).
 
 ## 🧪 Testes automatizados
 
@@ -101,7 +100,7 @@ A automação de API está implementada com **[Cypress](https://www.cypress.io/)
 
 **Total: 16/16 cenários automatizados**, cobrindo todos os casos definidos no [Plano de Testes](./docs/plano-de-testes.md).
 
-A pasta [`tests/`](./tests) permanece reservada para testes de integração com outra ferramenta (`tests/integration/`), caso sejam adicionados depois. `tests/features/` guarda a documentação em Gherkin que serviu de base para os testes do Cypress.
+A pasta [`tests/`](./tests) permanece reservada para testes de integração com outra ferramenta (`tests/integration/`), caso sejam adicionados depois. Os cenários em Gherkin que serviram de base para os testes do Cypress estão documentados na [Wiki](https://github.com/costabrunamaciel/livros-api/wiki) e em [`docs/wiki/06-Casos-de-teste-em-Gherkin.md`](./docs/wiki/06-Casos-de-teste-em-Gherkin.md).
 
 ### Como rodar os testes
 
